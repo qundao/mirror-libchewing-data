@@ -3,27 +3,26 @@ name: CI
 on:
   push:
     branches:
-      - "master"
+      - "main"
       - "release/*"
   pull_request:
     branches:
-      - "master"
+      - "main"
       - "release/*"
   merge_group:
     types: [checks_requested]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: fedora-latest
     name: Syntax Checks
 
     steps:
-      - uses: actions/checkout@v4
-
       - name: Setup dependencies
         run: |
-          rustup set auto-self-update disable
-          cargo install chewing-cli --git https://github.com/chewing/libchewing
+          dnf install -y nodejs24 cmake libchewing
+
+      - uses: actions/checkout@v4
 
       - name: Build
         run: |
