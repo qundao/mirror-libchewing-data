@@ -18,6 +18,7 @@ endif()
 include(GNUInstallDirs)
 
 add_subdirectory(dict/chewing)
+add_subdirectory(dict/moe)
 add_subdirectory(misc)
 
 if(PROJECT_IS_TOP_LEVEL)
