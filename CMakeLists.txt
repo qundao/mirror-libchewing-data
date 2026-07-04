@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.31.6...3.31.6)
+cmake_minimum_required(VERSION 3.27.0...3.31.6)
 project(libchewing-data VERSION 2026.3.22 LANGUAGES NONE)
 
 if(PROJECT_IS_TOP_LEVEL)
